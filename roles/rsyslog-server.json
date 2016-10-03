@@ -1,0 +1,6 @@
+{
+  "name": "rsyslog-server",
+  "run_list": [
+    "recipe[role_rsyslog::server]"
+  ]
+}

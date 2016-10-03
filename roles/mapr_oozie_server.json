@@ -1,0 +1,6 @@
+{
+  "name": "mapr_oozie_server",
+  "run_list": [
+    "recipe[role_mapr::oozie_server]"
+  ]
+}

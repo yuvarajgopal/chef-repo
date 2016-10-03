@@ -1,0 +1,7 @@
+{
+  "name": "mapr_node",
+  "description": "base role for a MapR node",
+  "run_list": [
+    "recipe[role_mapr]"
+  ]
+}

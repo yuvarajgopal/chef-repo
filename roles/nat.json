@@ -1,0 +1,16 @@
+{
+  "override_attributes": {
+  },
+  "name": "nat",
+  "description": "Role for EBU-SMS NAT Server",
+  "env_run_lists": {
+  },
+  "run_list": [
+    "recipe[role_base::nat]",
+    "recipe[role_nat]"
+  ],
+  "default_attributes": {
+  },
+  "chef_type": "role",
+  "json_class": "Chef::Role"
+}

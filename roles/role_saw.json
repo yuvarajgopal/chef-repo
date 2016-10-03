@@ -1,0 +1,18 @@
+{
+  "name": "role_saw",
+  "description": "role_saw",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+      "recipe[role_saw]"
+  ],
+  "env_run_lists": {
+
+  }
+}

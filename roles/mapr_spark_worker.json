@@ -1,0 +1,7 @@
+{
+  "name": "mapr_spark_worker",
+  "description": "role for a Spark worker",
+  "run_list": [
+    "recipe[role_mapr::spark_worker]"
+  ]
+}

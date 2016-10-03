@@ -1,0 +1,7 @@
+{
+  "name": "swap",
+  "description": "swapping configs",
+  "run_list": [
+    "recipe[role_swap]"
+  ]
+}

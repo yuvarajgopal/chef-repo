@@ -1,0 +1,7 @@
+{
+  "name": "mapr_drill_worker",
+  "description": "role for a Drill worker",
+  "run_list": [
+    "recipe[role_mapr::drill_worker]"
+  ]
+}

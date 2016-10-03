@@ -1,0 +1,7 @@
+{
+  "name": "esap",
+  "description": "Elasticsearch roles for the Analytics Portal",
+  "run_list": [
+    "recipe[role_esap]"
+  ]
+}
