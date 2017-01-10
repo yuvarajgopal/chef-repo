@@ -2,7 +2,7 @@
   "name": "dev-lab",
   "description": "DEV Lab environment",
   "cookbook_versions": {
-    "sncr_mapr": "= 0.1.4"
+    "sncr_mapr": "= 0.1.6"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
@@ -29,7 +29,7 @@
         }
       },
       "sncr_mapr": {
-          "version": "5.1.0",
+          "version": "1.6.1",
           "users_data_bag": "users_dev",
           "clustername": "dev_lab",
           "cloudplatform": "openstack",
@@ -48,7 +48,8 @@
           },
           "spark_config": {
               "daemon_memory": "1g",
-              "worker_memory": "7g"
+              "worker_memory": "7g",
+              "version": "1.6.1"
           },
           "drill_config": {
               "direct_memory": "4G",
