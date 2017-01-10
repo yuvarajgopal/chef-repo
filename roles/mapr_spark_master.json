@@ -2,6 +2,6 @@
   "name": "mapr_spark_master",
   "description": "Spark Master MapR node",
   "run_list": [
-    "recipe[role_mapr::spark_master]"
+    "recipe[sncr_mapr::spark_master]"
   ]
 }

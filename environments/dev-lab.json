@@ -1,0 +1,57 @@
+{
+  "name": "dev-lab",
+  "description": "DEV Lab environment",
+  "cookbook_versions": {
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+      "chef_client": {
+          "config": {
+              "chef_server_url": "https://chefserver.lab.com/organizations/dev-lab",
+              "validation_client_name": "dev-lab-validator.pem"
+          },
+          "cron": {
+              "environment_variables": "LC_ALL=en_US.UTF-8",
+              "hour": "*/1",
+              "log_file": "/var/log/chef-client.last"
+          }
+      },
+      "java": {
+        "install_flavor": "oracle",
+        "jdk_version": "8",
+        "oracle": {
+          "accept_oracle_download_terms": true,
+          "jce": {
+            "enabled": true
+          }
+        }
+      },
+      "sncr_mapr": {
+          "version": "5.1.0",
+          "users_data_bag": "users_dev",
+          "clustername": "dev_lab",
+          "node_count": "1",
+          "cluster_nodes": ["node1.lab.com"],
+          "cldb": ["node1.lab.com"],
+          "zk": ["node1.lab.com"],
+          "rm": ["node1.lab.com"],
+          "ws": ["node1.lab.com"],
+          "hs": "node1.lab.com",
+          "node": {
+              "disks": "/dev/sdb"
+          },
+          "clustershell": {
+              "rpm_url": "http://chefserver.lab.com:90/clustershell-1.6-1.el6.noarch.rpm"
+          },
+          "spark_config": {
+              "daemon_memory": "1g",
+              "worker_memory": "7g"
+          },
+          "drill_config": {
+              "direct_memory": "4G",
+              "heap_size": "4g"
+          }
+      }
+}
+}

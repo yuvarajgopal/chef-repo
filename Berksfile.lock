@@ -1,274 +1,32 @@
 DEPENDENCIES
-  build-essential (< 2.3.0)
-  cron (~> 1.6.0)
-  iptables (~> 1.0)
   mapr_installation
-    git: https://github.com/corbesero/mapr_installation.git
-    revision: 292762e7d51408fc81f374492c4b77c4cb3ee161
-  nginx (= 2.7.6)
-  openstack_base
-    git: ssh://git@stash.synchronoss.net:7999/bda/openstack_base.git
-    revision: 70db575de01482e9f10b1d52ee0548f74f72b0a7
-  role_activemq
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_activemq.git
-    revision: 80402f7a18e0ccaf8364c5b53d899cb29ac63a2c
-  role_base
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_base.git
-    revision: d3a83bded431f1668ced4a36085187936f5e50e4
-  role_bastion
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_bastion.git
-    revision: e43ac5009379cbe4c08b6be811f63153bf1a7495
-  role_bda_nginx
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_bda_nginx.git
-    revision: 34082f03aa4f13ff890ee87ffa6da67fb58ceb3e
-  role_deploy
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_deploy.git
-    revision: 20a1e104dde53dc96e3bb89a77b18f0d1663a4f0
-  role_esap
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_esap.git
-    revision: 33a63b0176432601f451f58dd5b3bb23f88e6508
-  role_mapr
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_mapr.git
-    revision: 6ce82b9118f029f3daf949123c79a7762c3a01ee
-  role_nat
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_nat.git
-    revision: 10b3643ba0e51db9e9af470551941ffb2e94b362
-  role_rsyslog
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_rsyslog.git
-    revision: dc91dd820003342d1dee73f85c302673525955d4
-  role_rtfe
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_rtfe.git
-    revision: e0417ac6b71b005454339eda141707ee75be4d34
-  role_saw
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_saw.git
-    revision: 9fc2bb975603dcfab3120bf195d70c48a61134e3
-  role_swap
-    git: ssh://git@stash.synchronoss.net:7999/bda/role_swap.git
-    revision: 4f3d4a3d398bdcb160afcc2a10016e1c8b9353c0
-  rsyslog (~> 2.2)
-  sncr_artifacts
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_artifacts.git
-    revision: c0769d5ee5ac716c75fe7fdb5db16a6877b7be2b
-  sncr_aws_nat_monitor
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_aws_nat_monitor.git
-    revision: 340721a03246800a6d94dc4f902f0b4e38c1d6c0
-  sncr_awstools
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_awstools.git
-    revision: 1ef48c1b716331abec8ce68f729c6afd61bcfb65
-  sncr_common_base
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_common_base.git
-    revision: 19a1efbd4119ff45398553a48fa97542eceadc68
-  sncr_external_service_tomcat8
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_external_service_tomcat8.git
-    revision: 061d7e9bb3ba1f3881c2b2d91e9b21b8be3612de
-  sncr_logicmon
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_logicmon.git
-    revision: 6a3de431430ec02273c56fa8ed685d490d0b7563
+    git: https://github.com/yuvarajgopal/mapr_installation.git
+    revision: fc9ac173204fe9966d04a2fcbaa519f129b35f72
   sncr_mapr
-    git: ssh://git@stash.synchronoss.net:7999/bda/sncr_mapr.git
-    revision: 7921e2485a924121ff7f322b8ab74379b64b2cb8
-  sncr_motd
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_motd.git
-    revision: 015aedf27556b4c6b6c8934213e0225d35325856
-  sncr_netcat
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_netcat.git
-    revision: c37a76d58265aadb5d3d5676b3a37796173d52ac
-  sncr_snmp
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_snmp.git
-    revision: 8e70f3e5da3a1ffabafb3a0c5745571fc92e8468
-  sncr_sssd
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_sssd.git
-    revision: 8262e744e4c6a2bf58f73a67093779871ee144f3
-  sncr_zabbix_agent
-    git: ssh://git@stash.synchronoss.net:7999/sncr-cookbooks/sncr_zabbix_agent.git
-    revision: a18ef20b0956a5454eb20a9118b1888b19d4e91b
+    git: https://github.com/yuvarajgopal/sncr_mapr.git
+    revision: 098a35c4d3e95d405c8257c0fc6adbc7622db0f4
 
 GRAPH
-  activemq (3.0.0)
-    java (~> 1.13)
-  apt (2.9.2)
-  ark (1.2.0)
-    build-essential (>= 0.0.0)
-    seven_zip (>= 0.0.0)
-    windows (>= 0.0.0)
-  aws (3.4.0)
-    ohai (>= 2.1.0)
-  blacklist_node_attrs (0.1.0)
-  bluepill (2.4.3)
-    rsyslog (>= 2.0)
-  build-essential (2.2.4)
-  chef-client (4.3.3)
-    cron (>= 1.2.0)
-    logrotate (>= 1.2.0)
-    windows (>= 1.39.0)
-  chef-sugar (3.3.0)
-  chef-vault (1.3.3)
-  chef_handler (1.4.0)
-  chef_handler_sns (3.0.0)
-    chef_handler (~> 1.0)
-  cron (1.6.1)
-  elasticsearch (2.3.2)
-    apt (>= 0.0.0)
-    ark (>= 0.0.0)
-    chef-sugar (>= 0.0.0)
-    yum (>= 0.0.0)
-  homebrew (2.1.0)
-    build-essential (>= 2.1.2)
-  iptables (1.1.0)
-  java (1.41.0)
+  apt (5.0.1)
+    compat_resource (>= 12.16.3)
+  compat_resource (12.16.3)
+  homebrew (3.0.0)
+  java (1.45.0)
     apt (>= 0.0.0)
     homebrew (>= 0.0.0)
     windows (>= 0.0.0)
-  limits (1.0.0)
-  line (0.6.3)
-  logrotate (1.9.2)
-  mapr_installation (0.6.2)
-    build-essential (>= 0.0.0)
-    iptables (>= 0.0.0)
-    java (>= 0.0.0)
-    limits (>= 0.0.0)
+  mapr_installation (0.1.0)
     ntp (>= 0.0.0)
-    selinux (>= 0.0.0)
+  ntp (3.3.1)
+  ohai (4.2.3)
+    compat_resource (>= 12.14.7)
+  sncr_mapr (0.1.0)
+    java (>= 0.0.0)
     sudo (>= 0.0.0)
-    sysctl (>= 0.0.0)
     users (>= 0.0.0)
     yum (>= 0.0.0)
-  nfs (2.2.8)
-    line (>= 0.0.0)
-    sysctl (>= 0.0.0)
-  nginx (2.7.6)
-    apt (~> 2.2)
-    bluepill (~> 2.3)
-    build-essential (~> 2.0)
-    ohai (~> 2.0)
-    runit (~> 1.2)
-    yum-epel (~> 0.3)
-  ntp (2.0.0)
-    windows (>= 1.38.0)
-  ohai (2.1.0)
-  openssh (2.0.0)
-    iptables (>= 1.0)
-  openstack_base (0.8.1)
-    blacklist_node_attrs (>= 0.0.0)
-    chef-client (>= 0.0.0)
-    chef_handler_sns (>= 0.0.0)
-    iptables (>= 0.0.0)
-    openssh (>= 0.0.0)
-    rsyslog (>= 0.0.0)
-    selinux (>= 0.0.0)
-    sncr_logicmon (>= 0.0.0)
-    sncr_netcat (>= 0.0.0)
-    sudo (>= 0.0.0)
-    zip (>= 0.0.0)
-  packagecloud (0.2.4)
-  python (1.4.6)
-    build-essential (>= 0.0.0)
-    yum-epel (>= 0.0.0)
-  role_activemq (0.0.1)
-    activemq (>= 0.0.0)
-    java (>= 0.0.0)
-    yum-centos (>= 0.0.0)
-  role_base (0.8.1)
-    blacklist_node_attrs (>= 0.0.0)
-    chef-client (>= 0.0.0)
-    chef_handler_sns (>= 0.0.0)
-    iptables (>= 0.0.0)
-    openssh (>= 0.0.0)
-    rsyslog (>= 0.0.0)
-    selinux (>= 0.0.0)
-    sncr_common_base (>= 0.0.0)
-    sncr_logicmon (>= 0.0.0)
-    sncr_netcat (>= 0.0.0)
-    sudo (>= 0.0.0)
-    zip (>= 0.0.0)
-  role_bastion (0.1.0)
-  role_bda_nginx (0.1.3)
-  role_deploy (0.2.0)
-    java (>= 0.0.0)
-  role_esap (0.3.0)
-    elasticsearch (>= 0.0.0)
-    java (>= 0.0.0)
-  role_mapr (0.9.0)
-    logrotate (>= 0.0.0)
-    sncr_mapr (>= 0.0.0)
-  role_nat (0.1.0)
-    sncr_aws_nat_monitor (>= 0.0.0)
-  role_rsyslog (0.5.0)
-    logrotate (>= 0.0.0)
-    nfs (>= 0.0.0)
-    rsyslog (>= 0.0.0)
-  role_rtfe (0.4.0)
-    java (>= 0.0.0)
-    limits (>= 0.0.0)
-    logrotate (>= 0.0.0)
-    rsyslog (>= 0.0.0)
-  role_saw (0.1.0)
-    java (>= 0.0.0)
-    sncr_external_service_tomcat8 (>= 0.0.0)
-  role_swap (0.3.0)
-    sncr_awstools (>= 0.0.0)
-  rsyslog (2.2.0)
-  runit (1.7.8)
-    packagecloud (>= 0.0.0)
-  selinux (0.9.0)
-  seven_zip (2.0.1)
-    windows (>= 1.2.2)
-  sncr_artifacts (0.1.0)
-    yum-amazon (>= 0.0.0)
-    yum-centos (>= 0.0.0)
-    yum-epel (>= 0.0.0)
-    yum-oracle (>= 0.0.0)
-  sncr_aws_nat_monitor (0.4.4)
-    python (>= 0.0.0)
-  sncr_awstools (0.1.14)
-    python (>= 0.0.0)
-  sncr_common_base (0.1.2)
-    chef-client (>= 0.0.0)
-    ntp (>= 0.0.0)
-    sncr_artifacts (>= 0.0.0)
-    sncr_motd (>= 0.0.0)
-    sncr_sssd (>= 0.0.0)
-    sncr_zabbix_agent (>= 0.0.0)
-    sudo (>= 0.0.0)
-  sncr_external_service_tomcat8 (0.4.3)
-    chef-vault (>= 0.0.0)
-    java (>= 0.0.0)
-  sncr_logicmon (1.0.0)
-    sncr_snmp (>= 0.0.0)
-  sncr_mapr (0.13.0)
-    build-essential (>= 0.0.0)
-    iptables (>= 0.0.0)
-    java (>= 0.0.0)
-    limits (>= 0.0.0)
-    line (>= 0.0.0)
-    ntp (>= 0.0.0)
-    selinux (>= 0.0.0)
-    sudo (>= 0.0.0)
-    sysctl (>= 0.0.0)
-    users (>= 0.0.0)
-    yum (>= 0.0.0)
-  sncr_motd (0.2.3)
-  sncr_netcat (0.1.2)
-  sncr_snmp (0.2.0)
-    snmp (>= 0.0.0)
-  sncr_sssd (1.0.1)
-  sncr_zabbix_agent (0.3.1)
-    aws (>= 0.0.0)
-    yum (>= 0.0.0)
-  snmp (4.0.0)
-  sudo (2.9.0)
-  sysctl (0.7.0)
-    ohai (>= 0.0.0)
-  users (2.0.3)
-  windows (1.44.1)
-    chef_handler (>= 0.0.0)
-  yum (3.11.0)
-  yum-amazon (0.2.3)
-    yum (~> 3.2)
-  yum-centos (0.4.11)
-    yum (~> 3.2)
-  yum-epel (0.7.0)
-    yum (>= 3.6.3)
-  yum-oracle (1.0.3)
-    yum (>= 0.0.0)
-  zip (1.1.0)
+  sudo (3.3.0)
+  users (4.0.3)
+  windows (2.1.1)
+    ohai (>= 4.0.0)
+  yum (4.1.0)
