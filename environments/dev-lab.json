@@ -2,7 +2,7 @@
   "name": "dev-lab",
   "description": "DEV Lab environment",
   "cookbook_versions": {
-    "sncr_mapr": "= 0.1.7"
+    "sncr_mapr": "= 0.1.14"
   },
   "json_class": "Chef::Environment",
   "chef_type": "environment",
@@ -29,7 +29,7 @@
         }
       },
       "sncr_mapr": {
-          "version": "1.6.1",
+          "version": "5.2.0",
           "users_data_bag": "users_dev",
           "clustername": "dev_lab",
           "cloudplatform": "openstack",
@@ -47,8 +47,8 @@
               "rpm_url": "http://chefserver.lab.com:90/clustershell-1.6-1.el6.noarch.rpm"
           },
           "spark_config": {
-              "daemon_memory": "1g",
-              "worker_memory": "7g",
+              "daemon_memory": "2g",
+              "worker_memory": "4g",
               "version": "1.6.1"
           },
           "drill_config": {
